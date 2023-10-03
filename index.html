@@ -537,10 +537,20 @@
         </a>
       </li>
     </ul>
+    <audio id="music" autoplay loop>
+        <source src="./svg/music.mp3" type="audio/mpeg">
+    </audio>
 
-  </div>
-  <script>
+    <script>
+        // Lấy tham chiếu đến thẻ audio
+        const music = document.getElementById('music');
     // Lấy tham chiếu đến phần tử p chứa số đếm
+            
+        // Đặt âm lượng mặc định là 0.2 (tương đương 20%)
+        const defaultVolume = 0.1;
+        
+        // Đặt âm lượng mặc định cho âm nhạc
+        music.volume = defaultVolume;
     const counterElement = document.getElementById('counter');
 
     let count = 0; // Khởi tạo biến đếm ban đầu
